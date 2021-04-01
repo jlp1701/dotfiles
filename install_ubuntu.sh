@@ -11,7 +11,7 @@ mkdir ~/repos
 # install common apt packages
 echo "Installing apt packages ..."
 sudo apt update
-sudo apt install curl firefox gimp git moreutils python3 python3-pip python3-setuptools stow texlive-full
+sudo apt install curl firefox gimp git moreutils python3 python3-pip python3-setuptools stow texlive-full gawk
 echo "done."
 
 # install cheat.sh
@@ -23,7 +23,7 @@ cd ~/repos
 git clone https://github.com/MirkoLedda/git-summary.git
 cd git-summary
 # sudo cp git-summary /usr/local/bin/git-summary
-ln -s ~/repos/git-summary/git-summary /usr/local/bin/git-summary
+sudo ln -s ~/repos/git-summary/git-summary /usr/local/bin/git-summary
 
 # Install vscode and configuration
 
