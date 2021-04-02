@@ -28,6 +28,23 @@ sudo ln -s ~/repos/git-summary/git-summary /usr/local/bin/git-summary
 # Install vscode and configuration
 
 # Install zsh
+echo "Installing zsh ..."
+sudo apt install fonts-powerline zsh
+
+# install oh-my-zsh
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+# stow the config file
+pushd ~/dotfiles
+rm ~/.zshrc
+stow zsh
+popd
+
+# switch the shell
+chsh -s $(which zsh)
+echo "done."
 
 # return to previous working dir
 popd
+
+echo "Installation complete."
