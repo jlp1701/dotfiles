@@ -6,7 +6,7 @@ pushd ~
 # install vbox guest-additions
 # reboot the machine
 
-mkdir ~/repos
+mkdir -p ~/repos
 
 # install common apt packages
 echo "Installing apt packages ..."
