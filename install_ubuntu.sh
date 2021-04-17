@@ -1,11 +1,18 @@
 #!/bin/bash
 
-pushd ~
-
+################################################################################
+# Install script to bootstrap ubuntu installation
+# Instructions: 
+#   1. Install git
+#   2. Clone the dotfiles repository to the home folder
+#   3. Execute this script
+### When installed in VBox the following steps have to be done before:
 # install build-essential (apt)
 # install vbox guest-additions
 # reboot the machine
+################################################################################
 
+pushd ~
 mkdir -p ~/repos
 
 # install common apt packages
