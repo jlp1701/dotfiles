@@ -5,7 +5,7 @@
 # Instructions: 
 #   1. Install git
 #   2. Clone the dotfiles repository to the home folder
-#   3. Execute this script
+#   3. Mark the this script executable and run it without sudo
 ### When installed in VBox the following steps have to be done before:
 # install build-essential (apt)
 # install vbox guest-additions
