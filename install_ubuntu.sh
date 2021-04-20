@@ -18,7 +18,7 @@ mkdir -p ~/repos
 # install common apt packages
 echo "Installing apt packages ..."
 sudo apt update
-sudo apt install curl firefox gimp git moreutils python3 python3-pip python3-setuptools stow texlive-full gawk xsel rlwrap
+sudo apt install curl firefox gimp git moreutils python3 python3-pip python3-setuptools stow gawk xsel rlwrap texlive-full
 echo "done."
 
 # install cheat.sh
@@ -34,6 +34,15 @@ sudo ln -s ~/repos/git-summary/git-summary /usr/local/bin/git-summary
 
 # Install vscode and configuration
 
+# install urxvt
+sudo apt install rxvt-unicode xsel
+
+# install terminal extensions
+git clone https://github.com/simmel/urxvt-resize-font
+mkdir -p ~./urxvt/ext
+cp ./urxvt-resize-font/resize-font ~/.urxvt/ext
+
+
 # Install zsh
 echo "Installing zsh ..."
 sudo apt install fonts-powerline zsh
@@ -46,11 +55,14 @@ git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-m
 pushd ~/dotfiles
 rm ~/.zshrc
 stow zsh
+stow X
 popd
 
 # switch the shell
 chsh -s $(which zsh)
 echo "done."
+
+xrdb ~/.Xresources
 
 # return to previous working dir
 popd
