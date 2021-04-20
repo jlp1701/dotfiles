@@ -28,9 +28,10 @@ sudo chmod +x /usr/local/bin/cht.sh
 # Git summary
 cd ~/repos
 git clone https://github.com/MirkoLedda/git-summary.git
-cd git-summary
+pushd git-summary
 # sudo cp git-summary /usr/local/bin/git-summary
 sudo ln -s ~/repos/git-summary/git-summary /usr/local/bin/git-summary
+popd
 
 # Install vscode and configuration
 
@@ -39,7 +40,7 @@ sudo apt install rxvt-unicode xsel -y
 
 # install terminal extensions
 git clone https://github.com/simmel/urxvt-resize-font
-mkdir -p ~./urxvt/ext
+mkdir -p ~/.urxvt/ext
 cp ./urxvt-resize-font/resize-font ~/.urxvt/ext
 
 # install dwm
