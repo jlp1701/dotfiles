@@ -2,6 +2,8 @@ urxvt.termName: rxvt-unicode
 urxvt.scrollBar: false
 urxvt.internalBorder: 0
 
+URxvt.perl-ext-common: default,resize-font
+
 !font
 urxvt.font: xft:Liberation Mono:style=Regular:pixelsize=12
 urxvt.boldFont: xft:Liberation Mono:style=Bold:pixelsize=12
@@ -39,7 +41,7 @@ URxvt.iso14755: false
 URxvt.iso14755_52: false
 
 !resizing font
-URxvt.perl-ext-common: resize-font
+!URxvt.perl-ext-common: resize-font
 
 !keybinds are not needed
 !URxvt.keysym.C-minus:     resize-font:smaller
