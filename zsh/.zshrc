@@ -1,12 +1,12 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-# export ZSH="/home/b/.oh-my-zsh"
-export ZSH="~/.oh-my-zsh"  # avoid hardcoded user names
+export ZSH="/home/jlp/.oh-my-zsh"
+# export ZSH="~/.oh-my-zsh"  # avoid hardcoded user names
 
-ZSH_THEME="agnoster"
+ZSH_THEME="robbyrussell"
 
-plugins=(git zsh-autosuggestions sudo colored-man-pages)
+plugins=(git zsh-autosuggestions colored-man-pages thefuck zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -20,3 +20,6 @@ source $ZSH/oh-my-zsh.sh
 
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+function ffp() {firefox --private-window "$@" &}
+function vpnup() {sudo openvpn --script-security 2 --config /etc/openvpn/ka-members-neu-linhir-190321.ovpn}
+function venv() {source venv/bin/activate}
