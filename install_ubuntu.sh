@@ -12,6 +12,9 @@
 # reboot the machine
 ################################################################################
 
+# remarks:
+#   firefox: plugins: uBlock origin, https everywhere, vim vixen
+
 pushd ~
 mkdir -p ~/repos
 
