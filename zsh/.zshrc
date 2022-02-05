@@ -1,10 +1,10 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-# export ZSH="/home/b/.oh-my-zsh"
-export ZSH="~/.oh-my-zsh"  # avoid hardcoded user names
+export ZSH="/home/jlp/.oh-my-zsh"
+# export ZSH="~/.oh-my-zsh"  # avoid hardcoded user names
 
-ZSH_THEME="agnoster"
+ZSH_THEME="robbyrussell"
 
 plugins=(git zsh-autosuggestions sudo colored-man-pages)
 

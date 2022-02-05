@@ -18,7 +18,7 @@ mkdir -p ~/repos
 # install common apt packages
 echo "Installing apt packages ..."
 sudo apt update -y
-sudo apt install curl firefox gimp git moreutils python3 python3-pip python3-setuptools stow gawk xsel rlwrap texlive-full -y
+sudo apt install curl firefox gimp git moreutils python3 python3-pip python3-setuptools stow gawk xsel rlwrap -y
 echo "done."
 
 # install cheat.sh
