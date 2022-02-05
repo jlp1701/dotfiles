@@ -6,7 +6,7 @@ export ZSH="/home/jlp/.oh-my-zsh"
 
 ZSH_THEME="robbyrussell"
 
-plugins=(git zsh-autosuggestions sudo colored-man-pages)
+plugins=(git zsh-autosuggestions colored-man-pages thefuck zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -20,3 +20,6 @@ source $ZSH/oh-my-zsh.sh
 
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+function ffp() {firefox --private-window "$@" &}
+function vpnup() {sudo openvpn --script-security 2 --config /etc/openvpn/ka-members-neu-linhir-190321.ovpn}
+function venv() {source venv/bin/activate}

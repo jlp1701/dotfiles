@@ -12,6 +12,14 @@
 # reboot the machine
 ################################################################################
 
+# remarks:
+#   firefox plugins: 
+#       uBlock origin
+#       https everywhere
+#       vim vixen
+#       KeepassXC-Browser (script needed: https://raw.githubusercontent.com/keepassxreboot/keepassxc/master/utils/keepassxc-snap-helper.sh)
+# 
+
 pushd ~
 mkdir -p ~/repos
 
@@ -36,15 +44,17 @@ popd
 # Install vscode and configuration
 
 # install urxvt
-sudo apt install rxvt-unicode xsel -y
+#sudo apt install rxvt-unicode xsel -y
 
 # install terminal extensions
-git clone https://github.com/simmel/urxvt-resize-font
-mkdir -p ~/.urxvt/ext
-cp ./urxvt-resize-font/resize-font ~/.urxvt/ext
+#git clone https://github.com/simmel/urxvt-resize-font
+#mkdir -p ~/.urxvt/ext
+#cp ./urxvt-resize-font/resize-font ~/.urxvt/ext
 
 # install dwm
-sudo apt install dwm suckless-tools -y
+#sudo apt install dwm suckless-tools -y
+
+pip3 install thefuck
 
 # Install zsh
 echo "Installing zsh ..."
@@ -53,6 +63,8 @@ sudo apt install fonts-powerline zsh -y
 # install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
+
 
 # stow the config file
 pushd ~/dotfiles
