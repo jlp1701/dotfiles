@@ -18,8 +18,32 @@ source $ZSH/oh-my-zsh.sh
 #   export EDITOR='mvim'
 # fi
 
+### custom environment variables
+export __LINUX__=1
+
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-function ffp() {firefox --private-window "$@" &}
-function vpnup() {sudo openvpn --script-security 2 --config /etc/openvpn/ka-members-neu-linhir-190321.ovpn}
+
+### fzf settings ###
+# enable keybindings
+# CTRL-T: Paste selected files and dirs onto cmd line
+# CTRL-R: Search and paste from history
+# ALT-C: cd into the selected dir
+source /usr/share/doc/fzf/examples/key-bindings.zsh
+# enable fuzzy auto-completions
+source /usr/share/doc/fzf/examples/completion.zsh
+
+### some PATH stuff ###
+export PATH=$PATH:/opt/gradle/gradle-7.4.1/bin
+export PATH=$PATH:/opt/node/node-v16.13.2-linux-x64/bin
+
+### custom functions ###
 function venv() {source venv/bin/activate}
+function git_set_user() {
+    if [[ $# -ne 2 ]]; then
+        echo "Illegal number of parameters: $#. Expected 2: user.name, user.email"
+    else
+        git config user.name "$1";
+        git config user.email "$2"
+    fi
+    }
